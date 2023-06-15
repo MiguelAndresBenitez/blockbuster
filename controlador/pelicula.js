@@ -61,7 +61,6 @@ rutas.put('peliculas/:id/estado/:estado', async (req, res) => {
         if (!peliculaActualizada) {
           return res.status(404).json({ mensaje: 'Película no encontrada' });
         }
-    
         res.status(200).json({ mensaje: 'Estado de alquiler actualizado exitosamente', pelicula: peliculaActualizada });
     } catch (error) {
         console.error('Error al cambiar el estado de alquiler:', error);
